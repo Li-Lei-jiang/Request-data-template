@@ -1,0 +1,67 @@
+- 模块化有两个核心：
+  - 导出和导入
+- commonJS 的的导出：
+  - module.exports = {
+  - flag:true,
+    - test(a,b){
+      - return a + b
+    - },
+    - demo(a,b){
+    -  return a + b
+    - }
+  - }
+  
+- commonJS 的的导入：
+  - let {flag,demo} = require ('../aa.js')
+    //类似  使用解构赋值的方式
+    var aa = require ('../aa.js')
+    var flag = aa.flag
+    var demo = aa.demo
+
+ES 6 模块化的语法
+
+export(导出)/import(导入)
+- 方法1：export(导出)
+  - exports let name ='jak'
+  -  exports let age = 18
+- 方法2：export(导出)
+  - let name = 'jak'
+  - let age = 18
+
+exports {name,age}
+
+导出函数/类
+
+
+export function sun(num1,num2){
+    retrun num1+ num2
+}
+export class aa{
+    run(){
+      console.log('秒啊')  
+    }
+}
+
+
+导入 函数/类
+import {sun，aa} from '../aa.js'
+
+console.log(sun(20,5))
+const A = new aa（）
+A.run（
+console.log（A.run（））
+
+
+导出
+const add = '成都'
+//export default 同一个文件只能有一个 不能有多个 不然不能确定默认的是哪一个
+export default  add
+
+导入 
+improt add from 'aa.js'
+
+导入所有
+improt * as aaa from 'aa.js'
+
+console.log(aaa.name)
+
